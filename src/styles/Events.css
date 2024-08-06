@@ -1,0 +1,153 @@
+/* Pagination */
+.pagination {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+}
+
+.page-item {
+    margin: 0 10px;
+}
+
+.page-btn {
+    text-decoration: none;
+    color: #000;
+    padding: 8px 12px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.page-btn:hover {
+    background-color: #b2ea16;
+    color: #fff;
+}
+
+.page-btn.active {
+    background-color: #f80606;
+    color: #fff;
+}
+
+.page-btn.disabled {
+    pointer-events: none;
+    background-color: #d3d3d3;
+    color: #777;
+}
+
+.page-btn:active {
+    background-color: #434343;
+    color: #fff;
+}
+
+.page-btn:focus {
+    outline: none;
+}
+
+/* Icons */
+.arrow-icon,
+.watch-icon {
+    width: 25px;
+    height: auto;
+    margin-right: 5px;
+    border: none;
+}
+
+/* Event Heading */
+h2 {
+    text-align: center;
+    padding-right: 290px;
+    padding-top: 20px;
+    animation: events 0.8s ease-in-out forwards;
+}
+
+/* Event Container */
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 60px;
+    animation: events 0.8s ease-in-out forwards;
+}
+
+/* Total Events */
+.total-events {
+    text-align: left;
+    padding: 20px;
+    color: #000;
+    font-size: large;
+    font-style: italic;
+    font-weight: bold;
+    animation: events 0.8s ease-in-out forwards;
+}
+
+.total-events span {
+    color: red;
+    font-weight: bold;
+}
+
+/* Blurred Background */
+.blur-background9 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; /* Set a maximum height */
+    max-height: 100vh; /* Ensure the background does not exceed the viewport height */
+    width: 100vw;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* Subtle blur effect */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    overflow-y: auto; /* Enable vertical scrolling */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+}
+
+.blur-background.hidden {
+    opacity: 0; /* Hide the background when not in use */
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.events-table {
+    width: 100%; 
+    border-collapse: collapse; 
+  }
+  
+  .events-table td {
+    width: 150px; 
+    height: 50px; 
+    border: 1px solid #ccc; 
+    text-align: center; 
+    
+  }
+  
+  /* Add blinking animation */
+  @keyframes blink {
+    0% { background-color: #fff; }
+    50% { background-color: #f0f0f0; }
+    100% { background-color: #fff; }
+  }
+  
+  .events-table td:empty {
+    animation: blink 1.5s infinite; 
+  }
+
+
+

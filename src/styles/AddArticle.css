@@ -1,0 +1,126 @@
+.add-article-page {
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-right: 140px;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+.add-article-container {
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    overflow-y: hidden;
+}
+
+.article-header {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #091160;
+  text-align: center;
+}
+
+@keyframes addArticle {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.article-form-group {
+  margin-bottom: 30px;
+  flex: 1;
+  margin-right: 50px;
+}
+
+@media (max-width: 768px) {
+  .article-form-group {
+    margin-right: 0;
+  }
+}
+
+.label {
+  color: #091160;
+  font-size: 20px;
+}
+
+.article-form-control {
+  border-radius: 0;
+  border-color: #ced4da;
+}
+
+.article-form-control-file {
+  border-radius: 0;
+  border-color: #ced4da;
+  padding: 10px 0;
+  
+}
+
+.article-btn-submit {
+  background-color: #091160;
+  color: #fff;
+  border-radius: 0;
+  border: none;
+  width: 100%;
+  font-size: 20px;
+  transition: background-color 0.3s;
+}
+
+.article-btn-submit:hover {
+  background-color: #001a5e;
+}
+
+.hr1 {
+  width: 100%;
+}
+
+.pp1 {
+  color: #091160;
+  text-align: center;
+  font-size: 30px;
+}
+/* Add this CSS to your stylesheet */
+
+/* Style for the file input */
+input[type="file"] {
+  /* Input Style */
+  position: relative;
+  padding: 0.9375rem;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Style for the file input button */
+input[type="file"]::file-selector-button {
+  padding: 0.625rem 0.9375rem 0.625rem 2.125rem;
+  background-color: var(--primary); 
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in;
+}
+
+/* Style for the file input button icon */
+input[type="file"]::before {
+  position: absolute;
+  top: 50%;
+  left: 1.5625rem;
+  width: 0.9375rem;
+  height: 1.25rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  content: url(../assets/icons/download_FILL0_wght400_GRAD0_opsz24.svg);
+}
